@@ -1,0 +1,22 @@
+{
+  "name": "mol-editor",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "node scripts/buildTest.mjs scripts/graphTest.ts scripts/.graphTest.mjs && node scripts/.graphTest.mjs && node scripts/buildTest.mjs scripts/serviceTest.ts scripts/.serviceTest.mjs && node scripts/.serviceTest.mjs"
+  },
+  "dependencies": {
+    "@rdkit/rdkit": "^2025.3.4-1.0.0",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.11",
+    "vue-tsc": "^2.1.10"
+  }
+}
